@@ -1,0 +1,19 @@
+# checkOverlaps.mac
+
+# Enable geometry overlap checking
+/geometry/test/setCheckOverlaps true
+
+# Optional: set tolerance
+/geometry/test/setTolerance 0.001 mm
+
+# Initialize the run manager and geometry
+/run/initialize
+
+# Disable visualization to avoid opening GUI
+/vis/disable
+
+# Run 1 event (enough for overlaps)
+/run/beamOn 1
+
+/control/echo Overlap check complete!
+

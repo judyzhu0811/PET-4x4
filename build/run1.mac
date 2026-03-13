@@ -1,0 +1,14 @@
+# Initialize kernel
+/run/initialize
+
+/control/verbose 1
+/run/verbose 1
+/event/verbose 0
+/tracking/verbose 2
+
+/gun/particle opticalphoton
+/gun/energy 511 keV
+
+#near detectors
+/gun/position 0 0 0.02 m
+/run/beamOn 10000
