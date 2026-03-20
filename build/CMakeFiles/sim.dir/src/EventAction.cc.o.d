@@ -1,6 +1,6 @@
 CMakeFiles/sim.dir/src/EventAction.cc.o: \
-  /Users/judyz/Desktop/copy/src/EventAction.cc \
-  /Users/judyz/Desktop/copy/include/EventAction.hh \
+  /Users/judyz/Desktop/PET-4x4/src/EventAction.cc \
+  /Users/judyz/Desktop/PET-4x4/include/EventAction.hh \
   /usr/local/include/Geant4/G4UserEventAction.hh \
   /usr/local/include/Geant4/globals.hh \
   /usr/local/include/Geant4/G4ios.hh \
@@ -974,7 +974,7 @@ CMakeFiles/sim.dir/src/EventAction.cc.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iomanip \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree \
-  /Users/judyz/Desktop/copy/include/run.hh \
+  /Users/judyz/Desktop/PET-4x4/include/run.hh \
   /usr/local/include/Geant4/G4UserRunAction.hh \
   /usr/local/include/Geant4/G4Run.hh \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream \
@@ -1260,7 +1260,7 @@ CMakeFiles/sim.dir/src/EventAction.cc.o: \
   /usr/local/include/Geant4/G4RunManagerKernel.hh \
   /usr/local/include/Geant4/rundefs.hh \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/list \
-  /Users/judyz/Desktop/copy/include/generator.hh \
+  /Users/judyz/Desktop/PET-4x4/include/generator.hh \
   /usr/local/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
   /usr/local/include/Geant4/G4ParticleGun.hh \
   /usr/local/include/Geant4/G4VPrimaryGenerator.hh \

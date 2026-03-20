@@ -7,7 +7,7 @@
 MyPrimaryGenerator::MyPrimaryGenerator()
 {
     fParticleGun = new G4ParticleGun(1);
-    fNPhotons = 2000;
+    fNPhotons = 100;
 
     // optical photon
     G4ParticleDefinition* particle = G4OpticalPhoton::OpticalPhotonDefinition();
@@ -30,7 +30,7 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
     //Randomize the emission position per event ---
     G4double x0 = (G4UniformRand() - 0.5) * 70.0*mm; // ±10 mm in x
     G4double y0 = (G4UniformRand() - 0.5) * 70.0*mm;// ±10 mm in y
-    G4double z0 = (G4UniformRand() - 0.5) * 0.0*mm; // ±10 mm in z
+    G4double z0 = -22.5*mm; //40mm
 
     fEmissionPos = G4ThreeVector(x0, y0, z0);
     fParticleGun->SetParticlePosition(fEmissionPos);

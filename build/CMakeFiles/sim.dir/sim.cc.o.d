@@ -1,4 +1,4 @@
-CMakeFiles/sim.dir/sim.cc.o: /Users/judyz/Desktop/copy/sim.cc \
+CMakeFiles/sim.dir/sim.cc.o: /Users/judyz/Desktop/PET-4x4/sim.cc \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__assertion_handler \
@@ -1435,7 +1435,7 @@ CMakeFiles/sim.dir/sim.cc.o: /Users/judyz/Desktop/copy/sim.cc \
   /usr/local/include/Geant4/G4GenericAnalysisManager.icc \
   /usr/local/include/Geant4/G4GenericFileManager.hh \
   /usr/local/include/Geant4/G4GenericFileManager.icc \
-  /Users/judyz/Desktop/copy/include/construction.hh \
+  /Users/judyz/Desktop/PET-4x4/include/construction.hh \
   /usr/local/include/Geant4/G4VUserDetectorConstruction.hh \
   /usr/local/include/Geant4/G4PVPlacement.hh \
   /usr/local/include/Geant4/G4NistManager.hh \
@@ -1452,7 +1452,7 @@ CMakeFiles/sim.dir/sim.cc.o: /Users/judyz/Desktop/copy/sim.cc \
   /usr/local/include/Geant4/G4LogicalSurface.hh \
   /usr/local/include/Geant4/G4LogicalSurface.icc \
   /usr/local/include/Geant4/G4LogicalSkinSurface.icc \
-  /Users/judyz/Desktop/copy/include/physics.hh \
+  /Users/judyz/Desktop/PET-4x4/include/physics.hh \
   /usr/local/include/Geant4/G4VModularPhysicsList.hh \
   /usr/local/include/Geant4/G4VPhysicsConstructor.hh \
   /usr/local/include/Geant4/G4PhysicsListHelper.hh \
@@ -1469,12 +1469,12 @@ CMakeFiles/sim.dir/sim.cc.o: /Users/judyz/Desktop/copy/sim.cc \
   /usr/local/include/Geant4/G4EmStandardPhysics.hh \
   /usr/local/include/Geant4/G4OpticalPhysics.hh \
   /usr/local/include/Geant4/G4OpticalParameters.hh \
-  /Users/judyz/Desktop/copy/include/action.hh \
+  /Users/judyz/Desktop/PET-4x4/include/action.hh \
   /usr/local/include/Geant4/G4VUserActionInitialization.hh \
-  /Users/judyz/Desktop/copy/include/generator.hh \
+  /Users/judyz/Desktop/PET-4x4/include/generator.hh \
   /usr/local/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
   /usr/local/include/Geant4/G4ParticleGun.hh \
   /usr/local/include/Geant4/G4VPrimaryGenerator.hh \
-  /Users/judyz/Desktop/copy/include/run.hh \
+  /Users/judyz/Desktop/PET-4x4/include/run.hh \
   /usr/local/include/Geant4/G4UserRunAction.hh \
   /usr/local/include/Geant4/G4Run.hh

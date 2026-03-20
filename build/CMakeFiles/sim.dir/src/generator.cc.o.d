@@ -1,6 +1,6 @@
 CMakeFiles/sim.dir/src/generator.cc.o: \
-  /Users/judyz/Desktop/copy/src/generator.cc \
-  /Users/judyz/Desktop/copy/include/generator.hh \
+  /Users/judyz/Desktop/PET-4x4/src/generator.cc \
+  /Users/judyz/Desktop/PET-4x4/include/generator.hh \
   /usr/local/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
   /usr/local/include/Geant4/G4ParticleGun.hh \
   /usr/local/include/Geant4/globals.hh \

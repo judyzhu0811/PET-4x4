@@ -1,8 +1,8 @@
 CMakeFiles/sim.dir/src/action.cc.o: \
-  /Users/judyz/Desktop/copy/src/action.cc \
-  /Users/judyz/Desktop/copy/include/action.hh \
+  /Users/judyz/Desktop/PET-4x4/src/action.cc \
+  /Users/judyz/Desktop/PET-4x4/include/action.hh \
   /usr/local/include/Geant4/G4VUserActionInitialization.hh \
-  /Users/judyz/Desktop/copy/include/generator.hh \
+  /Users/judyz/Desktop/PET-4x4/include/generator.hh \
   /usr/local/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
   /usr/local/include/Geant4/G4ParticleGun.hh \
   /usr/local/include/Geant4/globals.hh \
@@ -1030,7 +1030,7 @@ CMakeFiles/sim.dir/src/action.cc.o: \
   /usr/local/include/Geant4/G4ParticleTable.hh \
   /usr/local/include/Geant4/G4ParticleTableIterator.hh \
   /usr/local/include/Geant4/G4ParticleTable.icc \
-  /Users/judyz/Desktop/copy/include/run.hh \
+  /Users/judyz/Desktop/PET-4x4/include/run.hh \
   /usr/local/include/Geant4/G4UserRunAction.hh \
   /usr/local/include/Geant4/G4Run.hh \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream \
@@ -1051,7 +1051,7 @@ CMakeFiles/sim.dir/src/action.cc.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
-  /Users/judyz/Desktop/copy/include/EventAction.hh \
+  /Users/judyz/Desktop/PET-4x4/include/EventAction.hh \
   /usr/local/include/Geant4/G4UserEventAction.hh \
-  /Users/judyz/Desktop/copy/include/SteppingAction.hh \
+  /Users/judyz/Desktop/PET-4x4/include/SteppingAction.hh \
   /usr/local/include/Geant4/G4UserSteppingAction.hh

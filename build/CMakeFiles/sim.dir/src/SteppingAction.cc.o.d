@@ -1,8 +1,8 @@
 CMakeFiles/sim.dir/src/SteppingAction.cc.o: \
-  /Users/judyz/Desktop/copy/src/SteppingAction.cc \
-  /Users/judyz/Desktop/copy/include/SteppingAction.hh \
+  /Users/judyz/Desktop/PET-4x4/src/SteppingAction.cc \
+  /Users/judyz/Desktop/PET-4x4/include/SteppingAction.hh \
   /usr/local/include/Geant4/G4UserSteppingAction.hh \
-  /Users/judyz/Desktop/copy/include/EventAction.hh \
+  /Users/judyz/Desktop/PET-4x4/include/EventAction.hh \
   /usr/local/include/Geant4/G4UserEventAction.hh \
   /usr/local/include/Geant4/globals.hh \
   /usr/local/include/Geant4/G4ios.hh \
