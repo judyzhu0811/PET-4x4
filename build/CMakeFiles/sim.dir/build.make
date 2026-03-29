@@ -53,10 +53,17 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /Users/judyz/Desktop/PET-4x4
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /Users/judyz/Desktop/PET-4x4/build
+=======
+CMAKE_SOURCE_DIR = /Users/judyz/Desktop/PET-4x4-copy
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /Users/judyz/Desktop/PET-4x4-copy/build
+>>>>>>> f77a198 (updated)
 
 # Include any dependencies generated for this target.
 include CMakeFiles/sim.dir/depend.make
@@ -73,6 +80,7 @@ CMakeFiles/sim.dir/codegen:
 .PHONY : CMakeFiles/sim.dir/codegen
 
 CMakeFiles/sim.dir/sim.cc.o: CMakeFiles/sim.dir/flags.make
+<<<<<<< HEAD
 CMakeFiles/sim.dir/sim.cc.o: /Users/judyz/Desktop/PET-4x4/sim.cc
 CMakeFiles/sim.dir/sim.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/judyz/Desktop/PET-4x4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sim.dir/sim.cc.o"
@@ -183,6 +191,118 @@ CMakeFiles/sim.dir/src/run.cc.i: cmake_force
 CMakeFiles/sim.dir/src/run.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sim.dir/src/run.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/judyz/Desktop/PET-4x4/src/run.cc -o CMakeFiles/sim.dir/src/run.cc.s
+=======
+CMakeFiles/sim.dir/sim.cc.o: /Users/judyz/Desktop/PET-4x4-copy/sim.cc
+CMakeFiles/sim.dir/sim.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/judyz/Desktop/PET-4x4-copy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sim.dir/sim.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/sim.cc.o -MF CMakeFiles/sim.dir/sim.cc.o.d -o CMakeFiles/sim.dir/sim.cc.o -c /Users/judyz/Desktop/PET-4x4-copy/sim.cc
+
+CMakeFiles/sim.dir/sim.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sim.dir/sim.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/judyz/Desktop/PET-4x4-copy/sim.cc > CMakeFiles/sim.dir/sim.cc.i
+
+CMakeFiles/sim.dir/sim.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sim.dir/sim.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/judyz/Desktop/PET-4x4-copy/sim.cc -o CMakeFiles/sim.dir/sim.cc.s
+
+CMakeFiles/sim.dir/src/EventAction.cc.o: CMakeFiles/sim.dir/flags.make
+CMakeFiles/sim.dir/src/EventAction.cc.o: /Users/judyz/Desktop/PET-4x4-copy/src/EventAction.cc
+CMakeFiles/sim.dir/src/EventAction.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/judyz/Desktop/PET-4x4-copy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sim.dir/src/EventAction.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/src/EventAction.cc.o -MF CMakeFiles/sim.dir/src/EventAction.cc.o.d -o CMakeFiles/sim.dir/src/EventAction.cc.o -c /Users/judyz/Desktop/PET-4x4-copy/src/EventAction.cc
+
+CMakeFiles/sim.dir/src/EventAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sim.dir/src/EventAction.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/judyz/Desktop/PET-4x4-copy/src/EventAction.cc > CMakeFiles/sim.dir/src/EventAction.cc.i
+
+CMakeFiles/sim.dir/src/EventAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sim.dir/src/EventAction.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/judyz/Desktop/PET-4x4-copy/src/EventAction.cc -o CMakeFiles/sim.dir/src/EventAction.cc.s
+
+CMakeFiles/sim.dir/src/SteppingAction.cc.o: CMakeFiles/sim.dir/flags.make
+CMakeFiles/sim.dir/src/SteppingAction.cc.o: /Users/judyz/Desktop/PET-4x4-copy/src/SteppingAction.cc
+CMakeFiles/sim.dir/src/SteppingAction.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/judyz/Desktop/PET-4x4-copy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sim.dir/src/SteppingAction.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/src/SteppingAction.cc.o -MF CMakeFiles/sim.dir/src/SteppingAction.cc.o.d -o CMakeFiles/sim.dir/src/SteppingAction.cc.o -c /Users/judyz/Desktop/PET-4x4-copy/src/SteppingAction.cc
+
+CMakeFiles/sim.dir/src/SteppingAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sim.dir/src/SteppingAction.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/judyz/Desktop/PET-4x4-copy/src/SteppingAction.cc > CMakeFiles/sim.dir/src/SteppingAction.cc.i
+
+CMakeFiles/sim.dir/src/SteppingAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sim.dir/src/SteppingAction.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/judyz/Desktop/PET-4x4-copy/src/SteppingAction.cc -o CMakeFiles/sim.dir/src/SteppingAction.cc.s
+
+CMakeFiles/sim.dir/src/action.cc.o: CMakeFiles/sim.dir/flags.make
+CMakeFiles/sim.dir/src/action.cc.o: /Users/judyz/Desktop/PET-4x4-copy/src/action.cc
+CMakeFiles/sim.dir/src/action.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/judyz/Desktop/PET-4x4-copy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sim.dir/src/action.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/src/action.cc.o -MF CMakeFiles/sim.dir/src/action.cc.o.d -o CMakeFiles/sim.dir/src/action.cc.o -c /Users/judyz/Desktop/PET-4x4-copy/src/action.cc
+
+CMakeFiles/sim.dir/src/action.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sim.dir/src/action.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/judyz/Desktop/PET-4x4-copy/src/action.cc > CMakeFiles/sim.dir/src/action.cc.i
+
+CMakeFiles/sim.dir/src/action.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sim.dir/src/action.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/judyz/Desktop/PET-4x4-copy/src/action.cc -o CMakeFiles/sim.dir/src/action.cc.s
+
+CMakeFiles/sim.dir/src/construction.cc.o: CMakeFiles/sim.dir/flags.make
+CMakeFiles/sim.dir/src/construction.cc.o: /Users/judyz/Desktop/PET-4x4-copy/src/construction.cc
+CMakeFiles/sim.dir/src/construction.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/judyz/Desktop/PET-4x4-copy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sim.dir/src/construction.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/src/construction.cc.o -MF CMakeFiles/sim.dir/src/construction.cc.o.d -o CMakeFiles/sim.dir/src/construction.cc.o -c /Users/judyz/Desktop/PET-4x4-copy/src/construction.cc
+
+CMakeFiles/sim.dir/src/construction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sim.dir/src/construction.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/judyz/Desktop/PET-4x4-copy/src/construction.cc > CMakeFiles/sim.dir/src/construction.cc.i
+
+CMakeFiles/sim.dir/src/construction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sim.dir/src/construction.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/judyz/Desktop/PET-4x4-copy/src/construction.cc -o CMakeFiles/sim.dir/src/construction.cc.s
+
+CMakeFiles/sim.dir/src/generator.cc.o: CMakeFiles/sim.dir/flags.make
+CMakeFiles/sim.dir/src/generator.cc.o: /Users/judyz/Desktop/PET-4x4-copy/src/generator.cc
+CMakeFiles/sim.dir/src/generator.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/judyz/Desktop/PET-4x4-copy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sim.dir/src/generator.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/src/generator.cc.o -MF CMakeFiles/sim.dir/src/generator.cc.o.d -o CMakeFiles/sim.dir/src/generator.cc.o -c /Users/judyz/Desktop/PET-4x4-copy/src/generator.cc
+
+CMakeFiles/sim.dir/src/generator.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sim.dir/src/generator.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/judyz/Desktop/PET-4x4-copy/src/generator.cc > CMakeFiles/sim.dir/src/generator.cc.i
+
+CMakeFiles/sim.dir/src/generator.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sim.dir/src/generator.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/judyz/Desktop/PET-4x4-copy/src/generator.cc -o CMakeFiles/sim.dir/src/generator.cc.s
+
+CMakeFiles/sim.dir/src/physics.cc.o: CMakeFiles/sim.dir/flags.make
+CMakeFiles/sim.dir/src/physics.cc.o: /Users/judyz/Desktop/PET-4x4-copy/src/physics.cc
+CMakeFiles/sim.dir/src/physics.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/judyz/Desktop/PET-4x4-copy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/sim.dir/src/physics.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/src/physics.cc.o -MF CMakeFiles/sim.dir/src/physics.cc.o.d -o CMakeFiles/sim.dir/src/physics.cc.o -c /Users/judyz/Desktop/PET-4x4-copy/src/physics.cc
+
+CMakeFiles/sim.dir/src/physics.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sim.dir/src/physics.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/judyz/Desktop/PET-4x4-copy/src/physics.cc > CMakeFiles/sim.dir/src/physics.cc.i
+
+CMakeFiles/sim.dir/src/physics.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sim.dir/src/physics.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/judyz/Desktop/PET-4x4-copy/src/physics.cc -o CMakeFiles/sim.dir/src/physics.cc.s
+
+CMakeFiles/sim.dir/src/run.cc.o: CMakeFiles/sim.dir/flags.make
+CMakeFiles/sim.dir/src/run.cc.o: /Users/judyz/Desktop/PET-4x4-copy/src/run.cc
+CMakeFiles/sim.dir/src/run.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/judyz/Desktop/PET-4x4-copy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/sim.dir/src/run.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/src/run.cc.o -MF CMakeFiles/sim.dir/src/run.cc.o.d -o CMakeFiles/sim.dir/src/run.cc.o -c /Users/judyz/Desktop/PET-4x4-copy/src/run.cc
+
+CMakeFiles/sim.dir/src/run.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sim.dir/src/run.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/judyz/Desktop/PET-4x4-copy/src/run.cc > CMakeFiles/sim.dir/src/run.cc.i
+
+CMakeFiles/sim.dir/src/run.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sim.dir/src/run.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/judyz/Desktop/PET-4x4-copy/src/run.cc -o CMakeFiles/sim.dir/src/run.cc.s
+>>>>>>> f77a198 (updated)
 
 # Object files for target sim
 sim_OBJECTS = \
@@ -245,7 +365,11 @@ sim: /usr/local/lib/libG4clhep.dylib
 sim: /usr/local/lib/libG4ptl.3.0.0.dylib
 sim: /usr/local/lib/libG4zlib.dylib
 sim: CMakeFiles/sim.dir/link.txt
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/judyz/Desktop/PET-4x4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable sim"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/judyz/Desktop/PET-4x4-copy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable sim"
+>>>>>>> f77a198 (updated)
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sim.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -257,6 +381,10 @@ CMakeFiles/sim.dir/clean:
 .PHONY : CMakeFiles/sim.dir/clean
 
 CMakeFiles/sim.dir/depend:
+<<<<<<< HEAD
 	cd /Users/judyz/Desktop/PET-4x4/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/judyz/Desktop/PET-4x4 /Users/judyz/Desktop/PET-4x4 /Users/judyz/Desktop/PET-4x4/build /Users/judyz/Desktop/PET-4x4/build /Users/judyz/Desktop/PET-4x4/build/CMakeFiles/sim.dir/DependInfo.cmake "--color=$(COLOR)" sim
+=======
+	cd /Users/judyz/Desktop/PET-4x4-copy/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/judyz/Desktop/PET-4x4-copy /Users/judyz/Desktop/PET-4x4-copy /Users/judyz/Desktop/PET-4x4-copy/build /Users/judyz/Desktop/PET-4x4-copy/build /Users/judyz/Desktop/PET-4x4-copy/build/CMakeFiles/sim.dir/DependInfo.cmake "--color=$(COLOR)" sim
+>>>>>>> f77a198 (updated)
 .PHONY : CMakeFiles/sim.dir/depend
 

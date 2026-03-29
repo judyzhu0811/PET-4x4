@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /Users/judyz/Desktop/PET-4x4
+=======
+# Install script for directory: /Users/judyz/Desktop/PET-4x4-copy
+>>>>>>> f77a198 (updated)
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,7 +44,11 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
+<<<<<<< HEAD
   file(WRITE "/Users/judyz/Desktop/PET-4x4/build/install_local_manifest.txt"
+=======
+  file(WRITE "/Users/judyz/Desktop/PET-4x4-copy/build/install_local_manifest.txt"
+>>>>>>> f77a198 (updated)
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -56,6 +64,10 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+<<<<<<< HEAD
   file(WRITE "/Users/judyz/Desktop/PET-4x4/build/${CMAKE_INSTALL_MANIFEST}"
+=======
+  file(WRITE "/Users/judyz/Desktop/PET-4x4-copy/build/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> f77a198 (updated)
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

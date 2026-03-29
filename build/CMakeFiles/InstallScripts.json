@@ -1,7 +1,11 @@
 {
 	"InstallScripts" : 
 	[
+<<<<<<< HEAD
 		"/Users/judyz/Desktop/PET-4x4/build/cmake_install.cmake"
+=======
+		"/Users/judyz/Desktop/PET-4x4-copy/build/cmake_install.cmake"
+>>>>>>> f77a198 (updated)
 	],
 	"Parallel" : false
 }

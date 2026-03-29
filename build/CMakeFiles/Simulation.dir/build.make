@@ -53,10 +53,17 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /Users/judyz/Desktop/PET-4x4
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /Users/judyz/Desktop/PET-4x4/build
+=======
+CMAKE_SOURCE_DIR = /Users/judyz/Desktop/PET-4x4-copy
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /Users/judyz/Desktop/PET-4x4-copy/build
+>>>>>>> f77a198 (updated)
 
 # Utility rule file for Simulation.
 
@@ -84,6 +91,10 @@ CMakeFiles/Simulation.dir/clean:
 .PHONY : CMakeFiles/Simulation.dir/clean
 
 CMakeFiles/Simulation.dir/depend:
+<<<<<<< HEAD
 	cd /Users/judyz/Desktop/PET-4x4/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/judyz/Desktop/PET-4x4 /Users/judyz/Desktop/PET-4x4 /Users/judyz/Desktop/PET-4x4/build /Users/judyz/Desktop/PET-4x4/build /Users/judyz/Desktop/PET-4x4/build/CMakeFiles/Simulation.dir/DependInfo.cmake "--color=$(COLOR)" Simulation
+=======
+	cd /Users/judyz/Desktop/PET-4x4-copy/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/judyz/Desktop/PET-4x4-copy /Users/judyz/Desktop/PET-4x4-copy /Users/judyz/Desktop/PET-4x4-copy/build /Users/judyz/Desktop/PET-4x4-copy/build /Users/judyz/Desktop/PET-4x4-copy/build/CMakeFiles/Simulation.dir/DependInfo.cmake "--color=$(COLOR)" Simulation
+>>>>>>> f77a198 (updated)
 .PHONY : CMakeFiles/Simulation.dir/depend
 

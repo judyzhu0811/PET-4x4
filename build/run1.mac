@@ -10,4 +10,8 @@
 
 #near detectors
 /gun/position 0 0 0.02 m
+<<<<<<< HEAD
 /run/beamOn 50000
+=======
+/run/beamOn 500
+>>>>>>> f77a198 (updated)

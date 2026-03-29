@@ -138,7 +138,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CMake.app/Contents/share/cmake-4.2/Modules/Platform/Linker/Apple-AppleClang.cmake"
   "/Applications/CMake.app/Contents/share/cmake-4.2/Modules/Platform/UnixPaths.cmake"
   "/Applications/CMake.app/Contents/share/cmake-4.2/Modules/SelectLibraryConfigurations.cmake"
+<<<<<<< HEAD
   "/Users/judyz/Desktop/PET-4x4/CMakeLists.txt"
+=======
+  "/Users/judyz/Desktop/PET-4x4-copy/CMakeLists.txt"
+>>>>>>> f77a198 (updated)
   "CMakeFiles/4.2.1/CMakeCCompiler.cmake"
   "CMakeFiles/4.2.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.2.1/CMakeSystem.cmake"
