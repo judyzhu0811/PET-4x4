@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import norm
 import os
 
-filename = "/Users/judyz/Desktop/PET-4x4/build/merged_15000.csv"
+filename = "/Users/judyz/Desktop/PET-4x4/build/1mm/merge.csv"
 data = pd.read_csv(filename)
 
 sipm = data.loc[:, "sipm0":"sipm15"].copy()
@@ -62,7 +62,7 @@ def compute_fwhm(data):
 
 print("FWHM X:", compute_fwhm(dx))
 print("FWHM Y:", compute_fwhm(dy))
-output_folder = "/Users/judyz/Desktop/PET-4x4/plots"
+output_folder = "/Users/judyz/Desktop/PET-4x4/build/1mm"
 os.makedirs(output_folder, exist_ok=True)
 
 bins = np.linspace(-5, 5, 100)

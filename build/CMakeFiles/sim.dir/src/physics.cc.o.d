@@ -1,11 +1,6 @@
 CMakeFiles/sim.dir/src/physics.cc.o: \
-<<<<<<< HEAD
   /Users/judyz/Desktop/PET-4x4/src/physics.cc \
   /Users/judyz/Desktop/PET-4x4/include/physics.hh \
-=======
-  /Users/judyz/Desktop/PET-4x4-copy/src/physics.cc \
-  /Users/judyz/Desktop/PET-4x4-copy/include/physics.hh \
->>>>>>> f77a198 (updated)
   /usr/local/include/Geant4/G4VModularPhysicsList.hh \
   /usr/local/include/Geant4/G4VPhysicsConstructor.hh \
   /usr/local/include/Geant4/G4ParticleTable.hh \

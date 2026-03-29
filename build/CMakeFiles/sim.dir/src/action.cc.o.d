@@ -1,15 +1,8 @@
 CMakeFiles/sim.dir/src/action.cc.o: \
-<<<<<<< HEAD
   /Users/judyz/Desktop/PET-4x4/src/action.cc \
   /Users/judyz/Desktop/PET-4x4/include/action.hh \
   /usr/local/include/Geant4/G4VUserActionInitialization.hh \
   /Users/judyz/Desktop/PET-4x4/include/generator.hh \
-=======
-  /Users/judyz/Desktop/PET-4x4-copy/src/action.cc \
-  /Users/judyz/Desktop/PET-4x4-copy/include/action.hh \
-  /usr/local/include/Geant4/G4VUserActionInitialization.hh \
-  /Users/judyz/Desktop/PET-4x4-copy/include/generator.hh \
->>>>>>> f77a198 (updated)
   /usr/local/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
   /usr/local/include/Geant4/G4ParticleGun.hh \
   /usr/local/include/Geant4/globals.hh \
@@ -1037,11 +1030,7 @@ CMakeFiles/sim.dir/src/action.cc.o: \
   /usr/local/include/Geant4/G4ParticleTable.hh \
   /usr/local/include/Geant4/G4ParticleTableIterator.hh \
   /usr/local/include/Geant4/G4ParticleTable.icc \
-<<<<<<< HEAD
   /Users/judyz/Desktop/PET-4x4/include/run.hh \
-=======
-  /Users/judyz/Desktop/PET-4x4-copy/include/run.hh \
->>>>>>> f77a198 (updated)
   /usr/local/include/Geant4/G4UserRunAction.hh \
   /usr/local/include/Geant4/G4Run.hh \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream \
@@ -1062,13 +1051,7 @@ CMakeFiles/sim.dir/src/action.cc.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
-<<<<<<< HEAD
   /Users/judyz/Desktop/PET-4x4/include/EventAction.hh \
   /usr/local/include/Geant4/G4UserEventAction.hh \
   /Users/judyz/Desktop/PET-4x4/include/SteppingAction.hh \
-=======
-  /Users/judyz/Desktop/PET-4x4-copy/include/EventAction.hh \
-  /usr/local/include/Geant4/G4UserEventAction.hh \
-  /Users/judyz/Desktop/PET-4x4-copy/include/SteppingAction.hh \
->>>>>>> f77a198 (updated)
   /usr/local/include/Geant4/G4UserSteppingAction.hh

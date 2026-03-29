@@ -11,6 +11,7 @@
 
 int main(int argc, char** argv)
 {
+	CLHEP::HepRandom::setTheSeed(time(nullptr));
 	G4RunManager *runManager = new G4RunManager();
     
     runManager->SetUserInitialization(new MyDetectorConstruction());

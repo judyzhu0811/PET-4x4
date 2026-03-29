@@ -34,11 +34,7 @@ endif()
 set(__QT_DEPLOY_SYSTEM_NAME "Darwin")
 set(__QT_DEPLOY_IS_SHARED_LIBS_BUILD "ON")
 set(__QT_DEPLOY_TOOL "/opt/homebrew/bin/macdeployqt")
-<<<<<<< HEAD
 set(__QT_DEPLOY_IMPL_DIR "/Users/judyz/Desktop/PET-4x4/build/.qt")
-=======
-set(__QT_DEPLOY_IMPL_DIR "/Users/judyz/Desktop/PET-4x4-copy/build/.qt")
->>>>>>> f77a198 (updated)
 set(__QT_DEPLOY_VERBOSE "")
 set(__QT_CMAKE_EXPORT_NAMESPACE "Qt6")
 set(__QT_DEPLOY_GENERATOR_IS_MULTI_CONFIG "0")
@@ -62,11 +58,7 @@ set(__QT_DEPLOY_QT_DEBUG_POSTFIX "")
 
 # Define the CMake commands to be made available during deployment.
 set(__qt_deploy_support_files
-<<<<<<< HEAD
     "/Users/judyz/Desktop/PET-4x4/build/.qt/QtDeployTargets.cmake"
-=======
-    "/Users/judyz/Desktop/PET-4x4-copy/build/.qt/QtDeployTargets.cmake"
->>>>>>> f77a198 (updated)
     "/opt/homebrew/Cellar/qtbase/6.9.3_1/lib/cmake/Qt6Core/Qt6CoreDeploySupport.cmake"
 )
 foreach(__qt_deploy_support_file IN LISTS __qt_deploy_support_files)

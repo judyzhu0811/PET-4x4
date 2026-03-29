@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 /Users/judyz/Desktop/PET-4x4/build/CMakeFiles/sim.dir
 /Users/judyz/Desktop/PET-4x4/build/CMakeFiles/Simulation.dir
 /Users/judyz/Desktop/PET-4x4/build/CMakeFiles/edit_cache.dir
 /Users/judyz/Desktop/PET-4x4/build/CMakeFiles/rebuild_cache.dir
-=======
-/Users/judyz/Desktop/PET-4x4-copy/build/CMakeFiles/sim.dir
-/Users/judyz/Desktop/PET-4x4-copy/build/CMakeFiles/Simulation.dir
-/Users/judyz/Desktop/PET-4x4-copy/build/CMakeFiles/edit_cache.dir
-/Users/judyz/Desktop/PET-4x4-copy/build/CMakeFiles/rebuild_cache.dir
->>>>>>> f77a198 (updated)

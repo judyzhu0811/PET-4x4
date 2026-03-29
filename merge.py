@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 # Folder where your CSVs are
-folder = "/Users/judyz/Desktop/PET-4x4-copy/build/"
+folder = "/Users/judyz/Desktop/PET-4x4/build/1mm"
 
 dfs = []
 
@@ -22,7 +22,7 @@ for i in range(1, 31):
 merged_df = pd.concat(dfs, ignore_index=True)
 
 # Save merged file
-output_path = os.path.join(folder, "merged_15000.csv")
+output_path = os.path.join(folder, "merge.csv")
 merged_df.to_csv(output_path, index=False)
 
 print(f"\nMerged file saved as: {output_path}")
