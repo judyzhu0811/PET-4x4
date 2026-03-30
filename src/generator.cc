@@ -7,14 +7,11 @@
 MyPrimaryGenerator::MyPrimaryGenerator()
 {
     fParticleGun = new G4ParticleGun(1);
-    fNPhotons = 100;
     fNPhotons = 15000;
-    // optical photon
     G4ParticleDefinition* particle = G4OpticalPhoton::OpticalPhotonDefinition();
     fParticleGun->SetParticleDefinition(particle);
     fParticleGun->SetParticleEnergy(6.98*eV);  
 
-    // --- default position (center, will override per event) ---
     fEmissionPos = G4ThreeVector(0., 0., 0.);
     fParticleGun->SetParticlePosition(fEmissionPos);
 }
@@ -36,7 +33,6 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
 
     for (int i = 0; i < fNPhotons; i++)
     {
-        // Random isotropic direction
         G4double costheta = 2.0*G4UniformRand() - 1.0;  
         G4double sintheta = std::sqrt(1.0 - costheta*costheta);
         G4double phi = 2.0 * CLHEP::pi * G4UniformRand();
@@ -48,7 +44,6 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
         G4ThreeVector mom(x, y, z);
         fParticleGun->SetParticleMomentumDirection(mom.unit());
 
-        // Polarization
         G4ThreeVector normal = mom.orthogonal();
         G4ThreeVector polarization =
             normal*std::cos(2*CLHEP::pi*G4UniformRand()) +

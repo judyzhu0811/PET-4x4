@@ -44,7 +44,7 @@ error = np.sqrt(dx**2 + dy**2)
 x = y_true[:, 0]
 y = y_true[:, 1]
 
-bins = 75
+bins = 80
 
 heatmap, xedges, yedges = np.histogram2d(
     x, y, bins=bins, weights=error

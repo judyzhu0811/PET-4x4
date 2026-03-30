@@ -7,7 +7,7 @@ folder = "/Users/judyz/Desktop/PET-4x4/build/1mm"
 dfs = []
 
 # Loop through files 15000(1).csv → 15000(20).csv
-for i in range(1, 31):
+for i in range(1, 41):
     filename = f"15000({i}).csv"
     filepath = os.path.join(folder, filename)
     
