@@ -93,4 +93,15 @@ plt.title('MLP 5mm')
 plt.legend()
 plt.grid(True)
 plt.savefig(os.path.join(output_folder, "mlp_5mm.png"), dpi=300)
+# -------------------------
+# Loss vs Epoch plot
+# -------------------------
+plt.figure()
+plt.plot(model.loss_curve_)
+plt.xlabel("Epoch")
+plt.ylabel("Loss")
+plt.title("Training Loss vs Epoch (MLP 5mm)")
+plt.grid(True)
+
+plt.savefig(os.path.join(output_folder, "loss_epoch_MLP5mm.png"), dpi=300)
 plt.show()

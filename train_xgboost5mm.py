@@ -40,13 +40,17 @@ X_train, X_test, y_train, y_test = train_test_split(
     X_central, y_central, test_size=0.2, random_state=42
 )
 
+# -------------------------
+# Define models
+# -------------------------
 model_x = XGBRegressor(
     n_estimators=300,
     max_depth=5,
     learning_rate=0.05,
     subsample=0.8,
     colsample_bytree=0.8,
-    n_jobs=-1
+    n_jobs=-1,
+    eval_metric='rmse'
 )
 
 model_y = XGBRegressor(
@@ -55,12 +59,23 @@ model_y = XGBRegressor(
     learning_rate=0.05,
     subsample=0.8,
     colsample_bytree=0.8,
-    n_jobs=-1
+    n_jobs=-1,
+    eval_metric='rmse'
 )
 
+# -------------------------
+# Train models with eval_set
+# -------------------------
+eval_set_x = [(X_train, y_train[:, 0]), (X_test, y_test[:, 0])]
+eval_set_y = [(X_train, y_train[:, 1]), (X_test, y_test[:, 1])]
+
 print("Training models...")
-model_x.fit(X_train, y_train[:, 0])
-model_y.fit(X_train, y_train[:, 1])
+model_x.fit(X_train, y_train[:, 0], eval_set=eval_set_x, verbose=False)
+model_y.fit(X_train, y_train[:, 1], eval_set=eval_set_y, verbose=False)
+
+# Capture per-epoch results
+evals_result_x = model_x.evals_result()
+evals_result_y = model_y.evals_result()
 
 pred_x = model_x.predict(X_test)
 pred_y = model_y.predict(X_test)
@@ -74,11 +89,16 @@ def compute_fwhm(data):
 print("FWHM X (mm):", compute_fwhm(dx))
 print("FWHM Y (mm):", compute_fwhm(dy))
 
+# -------------------------
+# Output folder
+# -------------------------
 output_folder = "/Users/judyz/Desktop/PET-4x4/build/1mm"
 os.makedirs(output_folder, exist_ok=True)
 
+# -------------------------
+# ΔX/ΔY histogram
+# -------------------------
 plt.figure(figsize=(8, 5))
-
 bins = np.linspace(-5, 5, 100)
 counts_x, _ = np.histogram(dx, bins=bins)
 counts_y, _ = np.histogram(dy, bins=bins)
@@ -98,10 +118,27 @@ plt.plot(x_vals, norm.pdf(x_vals, mu_x, sigma_x) * len(dx) * (bins[1]-bins[0]) *
          '--', label=f'ΔX FWHM={2.355*sigma_x:.3f} mm')
 plt.plot(x_vals, norm.pdf(x_vals, mu_y, sigma_y) * len(dy) * (bins[1]-bins[0]) * scale_factor,
          '--', label=f'ΔY FWHM={2.355*sigma_y:.3f} mm')
+
 plt.xlabel('Difference between Reconstructed and Original X/Y Position (mm)')
 plt.ylabel('Counts')
 plt.title('XGBoost 5mm')
 plt.legend()
 plt.grid(True)
 plt.savefig(os.path.join(output_folder, 'xgboost_5mm.png'), dpi=300)
+
+# -------------------------
+# Loss vs Epoch plot
+# -------------------------
+plt.figure()
+plt.plot(np.array(evals_result_x['validation_0']['rmse'])**2, label='Train X')
+plt.plot(np.array(evals_result_x['validation_1']['rmse'])**2, label='Test X')
+plt.plot(np.array(evals_result_y['validation_0']['rmse'])**2, '--', label='Train Y')
+plt.plot(np.array(evals_result_y['validation_1']['rmse'])**2, '--', label='Test Y')
+
+plt.xlabel("Epoch")
+plt.ylabel("Loss")
+plt.title("Loss vs Epoch (XGBoost 5mm)")
+plt.legend()
+plt.grid(True)
+plt.savefig(os.path.join(output_folder, "loss_epoch_xgboost5mm.png"), dpi=300)
 plt.show()
