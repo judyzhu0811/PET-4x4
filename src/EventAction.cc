@@ -7,14 +7,9 @@
 #include "generator.hh"
 
 
-
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
 MyEventAction::MyEventAction(MyRunAction* runAction):fRunAction(runAction){
     fSipmCounts.fill(0);
 }
-
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void MyEventAction::BeginOfEventAction(const G4Event* )
 {
@@ -28,7 +23,6 @@ void MyEventAction::AddHit(int sipm_id){
         fSipmCounts[sipm_id+1]++;
     }
 }
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void MyEventAction::EndOfEventAction(const G4Event*)
 {
@@ -52,6 +46,4 @@ void MyEventAction::EndOfEventAction(const G4Event*)
         fRunAction->WriteEventRow(fSipmCounts, LCE, pos);
     }
 }
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
 

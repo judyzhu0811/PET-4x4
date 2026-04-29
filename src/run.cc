@@ -17,7 +17,6 @@ void MyRunAction::BeginOfRunAction(const G4Run*)
     return;
   }
 
-  // head
   fCsv << "event_id";
   for (int i = 0; i < 16; i++) fCsv << ",sipm" << i;
   fCsv << ",x(mm),y(mm),z(mm),LCE (%)\n";

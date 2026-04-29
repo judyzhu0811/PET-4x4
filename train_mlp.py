@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import norm
 import os
 
-filename = "/Users/judyz/Desktop/PET-4x4/build/1mm/merge.csv"
+filename = "/Users/judyz/Desktop/PET-4x4/build/14mm/14mm.csv"
 data = pd.read_csv(filename)
 
 sipm = data.loc[:, "sipm0":"sipm15"].copy()
@@ -54,9 +54,6 @@ model = MLPRegressor(
 print("Training MLP...")
 model.fit(X_train, y_train)
 
-# -------------------------
-# Predictions + evaluation
-# -------------------------
 pred = model.predict(X_test)
 
 dx = pred[:, 0] - y_test[:, 0]
@@ -68,15 +65,10 @@ def compute_fwhm(data):
 print("FWHM X:", compute_fwhm(dx))
 print("FWHM Y:", compute_fwhm(dy))
 
-# -------------------------
-# Output folder
-# -------------------------
-output_folder = "/Users/judyz/Desktop/PET-4x4/build/1mm"
+
+output_folder = "/Users/judyz/Desktop/PET-4x4/build/14mm"
 os.makedirs(output_folder, exist_ok=True)
 
-# -------------------------
-# Histogram plot
-# -------------------------
 bins = np.linspace(-5, 5, 100)
 
 counts_dx, _ = np.histogram(dx, bins=bins)
@@ -107,9 +99,6 @@ plt.grid(True)
 
 plt.savefig(os.path.join(output_folder, "mlp.png"), dpi=300)
 
-# -------------------------
-# Loss vs Epoch plot
-# -------------------------
 plt.figure()
 plt.plot(model.loss_curve_)
 plt.xlabel("Epoch")
@@ -119,7 +108,4 @@ plt.grid(True)
 
 plt.savefig(os.path.join(output_folder, "loss_epoch_MLP.png"), dpi=300)
 
-# -------------------------
-# Show all plots
-# -------------------------
 plt.show()

@@ -3,9 +3,6 @@
 #include "G4SDManager.hh"
 #include "G4LogicalVolumeStore.hh" 
 #include "G4LogicalBorderSurface.hh"
-#include "G4SubtractionSolid.hh"
-#include "G4VSolid.hh"
-
 
 MyDetectorConstruction::MyDetectorConstruction()
 {
@@ -83,13 +80,6 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	G4double pdTeflonAbsorbtionLength[iNbEntries] = {10 * m, 10 * m,
 													10 * m};											
 G4MaterialPropertiesTable* pTeflonPropertiesTable = new G4MaterialPropertiesTable();
-/*pTeflonPropertiesTable->AddProperty("RINDEX", pdTeflonPhotonMomentum, pdTeflonRefractiveIndex, iNbEntries);
-pTeflonPropertiesTable->AddProperty("ABSLENGTH", pdTeflonPhotonMomentum, pdTeflonAbsorbtionLength, iNbEntries);
-pTeflonPropertiesTable->AddProperty("SPECULARLOBECONSTANT", pdTeflonPhotonMomentum, pdTeflonSpecularLobe, iNbEntries);
-pTeflonPropertiesTable->AddProperty("SPECULARSPIKECONSTANT", pdTeflonPhotonMomentum, pdTeflonSpecularSpike, iNbEntries);
-pTeflonPropertiesTable->AddProperty("BACKSCATTERCONSTANT", pdTeflonPhotonMomentum, pdTeflonBackscatter, iNbEntries);
-pTeflonPropertiesTable->AddProperty("EFFICIENCY", pdTeflonPhotonMomentum, pdTeflonEfficiency, iNbEntries); */
-
 Teflon->SetMaterialPropertiesTable(pTeflonPropertiesTable);
 G4MaterialPropertiesTable* pLXeTeflonSurfaceTable = new G4MaterialPropertiesTable();
 
@@ -147,7 +137,7 @@ Silicon->SetMaterialPropertiesTable(SiMPT);
 	G4double pdLXePhotonMomentum[iNbEntries] = { 6.91 * eV, 6.98 * eV, 7.05 * eV };
 	G4double pdLXeScintillation[iNbEntries] = { 0.1,     1.0,     0.1 };
 	G4double pdLXeRefractiveIndex[iNbEntries] = { 1.63,    1.61,    1.58 };
-	G4double pdLXeAbsorbtionLength[iNbEntries] = { 5000. * cm, 5000. * cm, 5000. * cm }; //G4double pdLXeAbsorbtionLength[iNbEntries] = { 5000. * cm, 5000. * cm, 5000. * cm };
+	G4double pdLXeAbsorbtionLength[iNbEntries] = { 5000. * cm, 5000. * cm, 5000. * cm };
 	G4double pdLXeScatteringLength[iNbEntries] = { 100. * cm,  100. * cm,  100. * cm };
 // G4double pdLXeScatteringLength[iNbEntries] = { 30. * cm,  30. * cm,  30. * cm };
 
@@ -197,11 +187,6 @@ G4VPhysicalVolume *physLiquidXenon = new G4PVPlacement(
     0, G4ThreeVector(0., 0., 0.), logicLiquidXenon, "physLiquidXenon", logicTeflonShell, false, 0, true
 );
 
-//new G4LogicalBorderSurface("LXeToTeflon",
-                           //physLiquidXenon,
-                          // physTeflonShell,
-                          // pLXeTeflonOpticalSurface);
-						   
 // --------------------------------Cathode---------------------------------------
 G4Material* metalMaterial = nist->FindOrBuildMaterial("G4_Al");
 G4double metalPhotonEnergy[iNbEntries] = {6.91*eV, 6.98*eV, 7.05*eV};
@@ -223,18 +208,44 @@ G4double gap = 0.89*mm;                   // gap between squares
 G4double edgeMargin = 0.995*mm;           // distance from edge to first wire
 G4double wireSpacing = squareSize + gap;
 // ---- Solid cathode plate ----
-G4Box* cathodePlate = new G4Box("CathodePlate", cathodeHalfXY, cathodeHalfXY, wireThickness/2.);
-G4VSolid* cathodeGrid = cathodePlate;
+G4Box* cathodePlate = new G4Box("CathodePlate",
+    cathodeHalfXY,
+    cathodeHalfXY,
+    wireThickness/2.);
 
-for (int i=0; i<10; i++) {
-    for (int j=0; j<10; j++) {
-        G4double x = -cathodeHalfXY + edgeMargin + i*(squareSize + gap) + squareSize/2.;
-        G4double y = -cathodeHalfXY + edgeMargin + j*(squareSize + gap) + squareSize/2.;
-        G4Box* hole = new G4Box("Hole", squareSize/2., squareSize/2., wireThickness);
-        cathodeGrid = new G4SubtractionSolid("CathodeGrid", cathodeGrid, hole, 0, G4ThreeVector(x, y, 0));
+G4LogicalVolume* logicCathodeGrid =
+    new G4LogicalVolume(cathodePlate, metalMaterial, "logicCathodeGrid");
+
+// ---- LXe holes (daughter volumes) ----
+G4Box* holeBox = new G4Box("CathodeHole",
+    squareSize/2.,
+    squareSize/2.,
+    wireThickness/2.);
+
+G4LogicalVolume* logicHole =
+    new G4LogicalVolume(holeBox, LXe, "logicCathodeHole");
+
+// Placement of holes
+G4double initialXY = -cathodeHalfXY + edgeMargin + squareSize/2.;
+
+for (int i = 0; i < nSquares; i++) {
+    for (int j = 0; j < nSquares; j++) {
+
+        G4double x = initialXY + i * wireSpacing;
+        G4double y = initialXY + j * wireSpacing;
+
+        new G4PVPlacement(
+            0,
+            G4ThreeVector(x, y, 0),
+            logicHole,
+            "physCathodeHole",
+            logicCathodeGrid,
+            false,
+            i*nSquares + j,
+            false
+        );
     }
 }
-G4LogicalVolume* logicCathodeGrid = new G4LogicalVolume(cathodeGrid, metalMaterial, "logicCathodeGrid");
 G4double cathodeZ = -0.024*m - wireThickness/2.;
 new G4PVPlacement(0, G4ThreeVector(0., 0., cathodeZ),
                   logicCathodeGrid, "physCathode", logicLiquidXenon, false, 0, true);
@@ -289,26 +300,6 @@ for(G4int i = 0; i < nTopWires; i++){
     new G4PVPlacement(0, G4ThreeVector(0., y, zTop), logicTopWire,
                       "physTopWire", logicAnodeQuartz, false, i, true);
 }
-
-/*
-//Bottom Wires
-G4double zBottom = -anodeHalfZ + anodeWireThickness/2.;
-for(G4int i=0; i<nBottomWires; i++){
-     G4double y = -anodeHalfXY + anodeWireWidth/2. + i*anodeTopWireSpacing;
-    new G4PVPlacement(0, G4ThreeVector(0., y, zBottom), logicBottomWire,
-                      "physBottomWire", logicAnodeQuartz, false, i, true);
-}
-					  
-// Top wires (0.5 mm above bottom wires; closer to SiPMs)
-G4double zTop = anodeHalfZ - anodeWireThickness/2.;
-
-for(G4int i=0; i<nTopWires; i++){
-    G4double y = -anodeHalfXY + anodeWireWidth/2. + i*anodeTopWireSpacing;
-    new G4PVPlacement(0, G4ThreeVector(0., y, zTop), logicTopWire,
-                      "physTopWire", logicAnodeQuartz, false, i, true);
-}
-					  */
-
 
 //----------------------4x4 SiPM grid------------------
 G4int gridSize = 4;

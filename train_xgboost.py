@@ -9,7 +9,7 @@ import os
 # -------------------------
 # Load data
 # -------------------------
-filename = "/Users/judyz/Desktop/PET-4x4/build/1mm/merge.csv"
+filename = "/Users/judyz/Desktop/PET-4x4/build/14mm/14mm.csv"
 data = pd.read_csv(filename)
 
 sipm = data.loc[:, "sipm0":"sipm15"].copy()
@@ -68,49 +68,30 @@ params = {
     "objective": "reg:squarederror",
     "eval_metric": "rmse"
 }
-num_round = 300
 
-# -------------------------
-# Train X model
-# -------------------------
 evals_x = [(dtrain_x, 'train'), (dtest_x, 'test')]
 evals_result_x = {}
 bst_x = xgb.train(params, dtrain_x, num_round, evals=evals_x, evals_result=evals_result_x, verbose_eval=False)
 
-# -------------------------
-# Train Y model
-# -------------------------
 evals_y = [(dtrain_y, 'train'), (dtest_y, 'test')]
 evals_result_y = {}
 bst_y = xgb.train(params, dtrain_y, num_round, evals=evals_y, evals_result=evals_result_y, verbose_eval=False)
 
-# -------------------------
-# Predict
-# -------------------------
 pred_x = bst_x.predict(dtest_x)
 pred_y = bst_y.predict(dtest_y)
 
 dx = pred_x - y_test[:, 0]
 dy = pred_y - y_test[:, 1]
 
-# -------------------------
-# FWHM calculation
-# -------------------------
 def compute_fwhm(data):
     return 2.355 * np.std(data)
 
 print("FWHM X (mm):", compute_fwhm(dx))
 print("FWHM Y (mm):", compute_fwhm(dy))
 
-# -------------------------
-# Output folder
-# -------------------------
-output_folder = "/Users/judyz/Desktop/PET-4x4/build/1mm"
+output_folder = "/Users/judyz/Desktop/PET-4x4/build/14mm"
 os.makedirs(output_folder, exist_ok=True)
 
-# -------------------------
-# ΔX/ΔY histogram
-# -------------------------
 plt.figure(figsize=(8, 5))
 bins = np.linspace(-5, 5, 100)  
 counts_x, _ = np.histogram(dx, bins=bins)

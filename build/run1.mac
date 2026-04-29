@@ -1,13 +1,13 @@
 # Initialize kernel
 /run/initialize
 
-/control/verbose 1
-/run/verbose 1
+/control/verbose 0
+/run/verbose 0
 /event/verbose 0
-/tracking/verbose 2
+/tracking/verbose 0
 
 /gun/particle opticalphoton
 
 #near detectors
 /gun/position 0 0 0.02 m
-/run/beamOn 500
+/run/beamOn 20000

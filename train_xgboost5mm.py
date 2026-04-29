@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import norm
 import os
 
-filename = "/Users/judyz/Desktop/PET-4x4/build/1mm/merge.csv"
+filename = "/Users/judyz/Desktop/PET-4x4/build/14mm/14mm.csv"
 data = pd.read_csv(filename)
 
 sipm = data.loc[:, "sipm0":"sipm15"].copy()
@@ -40,9 +40,6 @@ X_train, X_test, y_train, y_test = train_test_split(
     X_central, y_central, test_size=0.2, random_state=42
 )
 
-# -------------------------
-# Define models
-# -------------------------
 model_x = XGBRegressor(
     n_estimators=300,
     max_depth=5,
@@ -63,9 +60,6 @@ model_y = XGBRegressor(
     eval_metric='rmse'
 )
 
-# -------------------------
-# Train models with eval_set
-# -------------------------
 eval_set_x = [(X_train, y_train[:, 0]), (X_test, y_test[:, 0])]
 eval_set_y = [(X_train, y_train[:, 1]), (X_test, y_test[:, 1])]
 
@@ -89,15 +83,9 @@ def compute_fwhm(data):
 print("FWHM X (mm):", compute_fwhm(dx))
 print("FWHM Y (mm):", compute_fwhm(dy))
 
-# -------------------------
-# Output folder
-# -------------------------
-output_folder = "/Users/judyz/Desktop/PET-4x4/build/1mm"
+output_folder = "/Users/judyz/Desktop/PET-4x4/build/14mm"
 os.makedirs(output_folder, exist_ok=True)
 
-# -------------------------
-# ΔX/ΔY histogram
-# -------------------------
 plt.figure(figsize=(8, 5))
 bins = np.linspace(-5, 5, 100)
 counts_x, _ = np.histogram(dx, bins=bins)

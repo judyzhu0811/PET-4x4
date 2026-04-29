@@ -1177,9 +1177,4 @@ CMakeFiles/sim.dir/src/construction.cc.o: \
   /usr/local/include/Geant4/G4VStoreNotifier.hh \
   /usr/local/include/Geant4/G4VNotifier.hh \
   /usr/local/include/Geant4/G4LogicalBorderSurface.hh \
-  /usr/local/include/Geant4/G4LogicalBorderSurface.icc \
-  /usr/local/include/Geant4/G4SubtractionSolid.hh \
-  /usr/local/include/Geant4/G4BooleanSolid.hh \
-  /usr/local/include/Geant4/G4DisplacedSolid.hh \
-  /usr/local/include/Geant4/G4VBooleanProcessor.hh \
-  /usr/local/include/Geant4/G4BooleanSolid.icc
+  /usr/local/include/Geant4/G4LogicalBorderSurface.icc

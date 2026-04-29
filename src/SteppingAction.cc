@@ -38,7 +38,7 @@ void MySteppingAction::UserSteppingAction(const G4Step* step)
 
        
         auto touch = post->GetTouchableHandle();
-        int sipm_id = touch->GetCopyNumber(1); // depth=1 → physDetector
+        int sipm_id = touch->GetCopyNumber(1);
 
         fEventAction->AddHit(sipm_id);
 

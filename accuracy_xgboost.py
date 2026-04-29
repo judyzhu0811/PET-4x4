@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.multioutput import MultiOutputRegressor
 from xgboost import XGBRegressor
 
-filename = "/Users/judyz/Desktop/PET-4x4/build/1mm/merge.csv"
+filename = "/Users/judyz/Desktop/PET-4x4/build/14mm/14mm.csv"
 data = pd.read_csv(filename)
 sipm = data.loc[:, "sipm0":"sipm15"].copy()
 
@@ -64,7 +64,7 @@ avg_error = np.divide(
 
 extent = [xedges[0], xedges[-1], yedges[0], yedges[-1]]
 
-output_folder = "/Users/judyz/Desktop/PET-4x4/build/1mm"
+output_folder = "/Users/judyz/Desktop/PET-4x4/build/14mm"
 os.makedirs(output_folder, exist_ok=True)
 
 plt.figure(figsize=(6, 5))

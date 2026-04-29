@@ -6060,8 +6060,6 @@ CMakeFiles/sim.dir/src/construction.cc.o: /Users/judyz/Desktop/PET-4x4/src/const
   /usr/local/include/Geant4/G4Allocator.hh \
   /usr/local/include/Geant4/G4AllocatorPool.hh \
   /usr/local/include/Geant4/G4AutoLock.hh \
-  /usr/local/include/Geant4/G4BooleanSolid.hh \
-  /usr/local/include/Geant4/G4BooleanSolid.icc \
   /usr/local/include/Geant4/G4Box.hh \
   /usr/local/include/Geant4/G4Box.icc \
   /usr/local/include/Geant4/G4CSGSolid.hh \
@@ -6071,7 +6069,6 @@ CMakeFiles/sim.dir/src/construction.cc.o: /Users/judyz/Desktop/PET-4x4/src/const
   /usr/local/include/Geant4/G4DataVector.hh \
   /usr/local/include/Geant4/G4DataVector.icc \
   /usr/local/include/Geant4/G4DensityEffectCalculator.hh \
-  /usr/local/include/Geant4/G4DisplacedSolid.hh \
   /usr/local/include/Geant4/G4DynamicParticle.hh \
   /usr/local/include/Geant4/G4DynamicParticle.icc \
   /usr/local/include/Geant4/G4ElectronOccupancy.hh \
@@ -6154,7 +6151,6 @@ CMakeFiles/sim.dir/src/construction.cc.o: /Users/judyz/Desktop/PET-4x4/src/const
   /usr/local/include/Geant4/G4SteppingControl.hh \
   /usr/local/include/Geant4/G4String.hh \
   /usr/local/include/Geant4/G4String.icc \
-  /usr/local/include/Geant4/G4SubtractionSolid.hh \
   /usr/local/include/Geant4/G4SurfaceProperty.hh \
   /usr/local/include/Geant4/G4SystemOfUnits.hh \
   /usr/local/include/Geant4/G4Threading.hh \
@@ -6169,7 +6165,6 @@ CMakeFiles/sim.dir/src/construction.cc.o: /Users/judyz/Desktop/PET-4x4/src/const
   /usr/local/include/Geant4/G4Transform3D.hh \
   /usr/local/include/Geant4/G4TwoVector.hh \
   /usr/local/include/Geant4/G4Types.hh \
-  /usr/local/include/Geant4/G4VBooleanProcessor.hh \
   /usr/local/include/Geant4/G4VHit.hh \
   /usr/local/include/Geant4/G4VHitsCollection.hh \
   /usr/local/include/Geant4/G4VNotifier.hh \
@@ -10284,8 +10279,6 @@ CMakeFiles/sim.dir/src/run.cc.o: /Users/judyz/Desktop/PET-4x4/src/run.cc \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ctime:
 
-/usr/local/include/Geant4/G4VBooleanProcessor.hh:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstring:
@@ -10665,8 +10658,6 @@ CMakeFiles/sim.dir/src/run.cc.o: /Users/judyz/Desktop/PET-4x4/src/run.cc \
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/invocable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/stop_callback.h:
-
-/usr/local/include/Geant4/G4BooleanSolid.hh:
 
 /usr/local/include/Geant4/G4PseudoScene.hh:
 
@@ -11822,8 +11813,6 @@ CMakeFiles/sim.dir/src/run.cc.o: /Users/judyz/Desktop/PET-4x4/src/run.cc \
 
 /Users/judyz/Desktop/PET-4x4/sim.cc:
 
-/usr/local/include/Geant4/G4SubtractionSolid.hh:
-
 /usr/local/include/Geant4/G4PDefManager.hh:
 
 /usr/local/include/Geant4/G4ClassificationOfNewTrack.hh:
@@ -11849,8 +11838,6 @@ CMakeFiles/sim.dir/src/run.cc.o: /Users/judyz/Desktop/PET-4x4/src/run.cc \
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/wait.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/default_searcher.h:
-
-/usr/local/include/Geant4/G4BooleanSolid.icc:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/pointer_traits.h:
 
@@ -11953,8 +11940,6 @@ CMakeFiles/sim.dir/src/run.cc.o: /Users/judyz/Desktop/PET-4x4/src/run.cc \
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/common_reference_with.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/gamma.h:
-
-/usr/local/include/Geant4/G4DisplacedSolid.hh:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/literals.h:
 
