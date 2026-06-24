@@ -10,4 +10,4 @@
 
 #near detectors
 /gun/position 0 0 0.02 m
-/run/beamOn 20000
+/run/beamOn 100000

@@ -1,6 +1,6 @@
 CMakeFiles/sim.dir/src/construction.cc.o: \
-  /Users/judyz/Desktop/PET-4x4/src/construction.cc \
-  /Users/judyz/Desktop/PET-4x4/include/construction.hh \
+  /Users/judyz/Desktop/PET-4x4\ copy/src/construction.cc \
+  /Users/judyz/Desktop/PET-4x4\ copy/include/construction.hh \
   /usr/local/include/Geant4/G4VUserDetectorConstruction.hh \
   /usr/local/include/Geant4/globals.hh \
   /usr/local/include/Geant4/G4ios.hh \

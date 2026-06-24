@@ -5,7 +5,7 @@ import os
 from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPRegressor
 
-filename = "/Users/judyz/Desktop/PET-4x4/build/14mm/14mm.csv"
+filename = "/Users/judyz/Desktop/PET-4x4/build/15.05mm/15.05mm.csv"
 data = pd.read_csv(filename)
 sipm = data.loc[:, "sipm0":"sipm15"].copy()
 
@@ -58,7 +58,7 @@ avg_error = np.divide(
     where=counts > 0
 )
 
-output_folder = "/Users/judyz/Desktop/PET-4x4/build/14mm"
+output_folder = "/Users/judyz/Desktop/PET-4x4/build/15.05mm"
 os.makedirs(output_folder, exist_ok=True)
 
 plt.figure(figsize=(6, 5))

@@ -1,5 +1,6 @@
-CMakeFiles/sim.dir/src/run.cc.o: /Users/judyz/Desktop/PET-4x4/src/run.cc \
-  /Users/judyz/Desktop/PET-4x4/include/run.hh \
+CMakeFiles/sim.dir/src/run.cc.o: \
+  /Users/judyz/Desktop/PET-4x4\ copy/src/run.cc \
+  /Users/judyz/Desktop/PET-4x4\ copy/include/run.hh \
   /usr/local/include/Geant4/G4UserRunAction.hh \
   /usr/local/include/Geant4/G4Types.hh \
   /usr/local/include/Geant4/G4GlobalConfig.hh \

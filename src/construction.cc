@@ -260,7 +260,7 @@ G4VisAttributes* quartzVis = new G4VisAttributes(G4Colour(0.5,0.5,1.0,0.3)); // 
 quartzVis->SetForceSolid(true);
 logicAnodeQuartz->SetVisAttributes(quartzVis);
 G4double sipmBottom = 0.024*m - 0.001*m;
-G4double anodeZ = sipmBottom - 5*mm - anodeHalfZ; // G4double anodeZ = sipmBottom - 5*mm - anodeHalfZ;
+G4double anodeZ = sipmBottom - 5*mm - anodeHalfZ; // 6.05 mm below SiPM G4double anodeZ = sipmBottom - 5*mm - anodeHalfZ; center to center
 new G4PVPlacement(0, G4ThreeVector(0.,0.,anodeZ),
                   logicAnodeQuartz, "physAnodeQuartz",
                   logicLiquidXenon, false, 0, true);
@@ -296,7 +296,7 @@ for(G4int i = 0; i < nBottomWires; i++){
 // Top wires (0.5 mm above bottom wires; closer to SiPMs)
 G4double zTop = anodeHalfZ - anodeWireThickness/2.;
 for(G4int i = 0; i < nTopWires; i++){
-    G4double y = yStart + i*anodeTopWireSpacing;  // <-- use yStart here
+    G4double y = yStart + i*anodeTopWireSpacing; 
     new G4PVPlacement(0, G4ThreeVector(0., y, zTop), logicTopWire,
                       "physTopWire", logicAnodeQuartz, false, i, true);
 }
