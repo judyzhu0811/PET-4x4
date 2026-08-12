@@ -5,7 +5,7 @@ import xgboost as xgb
 import matplotlib.pyplot as plt
 import os
 
-filename = "/Users/judyz/Desktop/PET-4x4 copy/build/hits_per_event.csv"
+filename = "/Users/judyz/Desktop/PET-4x4/build/hits_per_event.csv"
 data = pd.read_csv(filename)
 
 sipm = data.loc[:, "sipm0":"sipm15"].copy()
@@ -111,7 +111,7 @@ print(f"Tail >3mm = {tail_3mm:.6f}")
 print("\n=========================================\n")
 
 
-output_folder = "/Users/judyz/Desktop/PET-4x4 copy/build"
+output_folder = "/Users/judyz/Desktop/PET-4x4/build"
 os.makedirs(output_folder, exist_ok=True)
 
 bins = np.linspace(-5, 5, 100)

@@ -4,16 +4,10 @@ import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter
 import os
 
-# -------------------------
-# Load data
-# -------------------------
 csv_path = "/Users/judyz/Desktop/PET-4x4/build/15.05mm/15.05mm.csv"
 
 df = pd.read_csv(csv_path)
 
-# -------------------------
-# FIXED Y SLICE
-# -------------------------
 y_center = 0.0
 y_width = 1.0
 
@@ -22,9 +16,6 @@ slice_df = df[
     (df["y(mm)"] <= y_center + y_width)
 ]
 
-# -------------------------
-# GLOBAL STATS
-# -------------------------
 mean_lce = slice_df["LCE (%)"].mean()
 std_lce = slice_df["LCE (%)"].std()
 cv = std_lce / mean_lce
@@ -32,9 +23,6 @@ cv = std_lce / mean_lce
 print("Mean LCE (slice):", mean_lce)
 print("Uniformity (CV):", cv)
 
-# -------------------------
-# BINNING (X-Z)
-# -------------------------
 x_min, x_max = -35, 35
 z_min, z_max = -25, 25
 
@@ -43,9 +31,6 @@ n_bins = 40
 x_bins = np.linspace(x_min, x_max, n_bins + 1)
 z_bins = np.linspace(z_min, z_max, n_bins + 1)
 
-# -------------------------
-# RAW HISTOGRAM
-# -------------------------
 H, _, _ = np.histogram2d(
     slice_df["x(mm)"],
     slice_df["z(mm)"],
@@ -63,9 +48,6 @@ avg_LCE = np.full_like(H, np.nan, dtype=float)
 valid = counts > 0
 avg_LCE[valid] = H[valid] / counts[valid]
 
-# -------------------------
-# GAUSSIAN SMOOTHING
-# -------------------------
 mask = np.isfinite(avg_LCE)
 
 data_filled = np.where(mask, avg_LCE, 0)
@@ -82,9 +64,6 @@ avg_LCE_smooth = np.divide(
     where=smoothed_mask > 0
 )
 
-# -------------------------
-# SAVE PATH (same folder as CSV)
-# -------------------------
 output_dir = os.path.dirname(csv_path)
 
 output_path = os.path.join(
@@ -92,9 +71,6 @@ output_path = os.path.join(
     f"xz_lce.png"
 )
 
-# -------------------------
-# PLOT
-# -------------------------
 plt.figure(figsize=(7,6))
 
 plt.pcolormesh(
@@ -124,10 +100,6 @@ plt.figtext(
 )
 
 plt.tight_layout(rect=[0, 0.05, 1, 1])
-
-# -------------------------
-# SAVE + SHOW
-# -------------------------
 plt.savefig(output_path, dpi=300, bbox_inches="tight")
 plt.show()
 

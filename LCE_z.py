@@ -2,16 +2,10 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-# -------------------------
 # Load data
-# -------------------------
 df = pd.read_csv(
     "/Users/judyz/Desktop/PET-4x4/build/3.05mm/3.05mm.csv"
 )
-
-# -------------------------
-# FIX Y (choose center slice)
-# -------------------------
 y_center = 0.0      # change this
 y_width = 2.0       # thickness of slice (mm)
 
@@ -19,10 +13,7 @@ df_slice = df[
     (df["y(mm)"] >= y_center - y_width/2) &
     (df["y(mm)"] <  y_center + y_width/2)
 ]
-
-# -------------------------
 # Z bins (same as before)
-# -------------------------
 n_z_bins = 40
 z_bins = np.linspace(-35, 35, n_z_bins + 1)
 
@@ -30,9 +21,7 @@ z_centers = []
 mean_lce = []
 std_lce = []
 
-# -------------------------
-# Loop over Z slices (NOW at fixed Y)
-# -------------------------
+# Loop over Z slices 
 for i in range(len(z_bins) - 1):
 
     z_low = z_bins[i]
@@ -51,16 +40,11 @@ for i in range(len(z_bins) - 1):
     mean_lce.append(slice_df["LCE (%)"].mean())
     std_lce.append(slice_df["LCE (%)"].std())
 
-# -------------------------
-# Convert arrays
-# -------------------------
 z_centers = np.array(z_centers)
 mean_lce = np.array(mean_lce)
 std_lce = np.array(std_lce)
 
-# -------------------------
-# Plot X–Z slice result (actually Z profile at fixed Y)
-# -------------------------
+# Plot X–Z slice 
 plt.figure(figsize=(8,6))
 
 plt.plot(z_centers, mean_lce, marker='o')
@@ -86,9 +70,5 @@ plt.savefig(
 )
 
 plt.show()
-
-# -------------------------
-# Metrics
-# -------------------------
 print("Overall Mean LCE:", np.mean(mean_lce))
 print("Depth Uniformity (CV):", np.std(mean_lce) / np.mean(mean_lce))

@@ -260,7 +260,7 @@ G4VisAttributes* quartzVis = new G4VisAttributes(G4Colour(0.5,0.5,1.0,0.3)); // 
 quartzVis->SetForceSolid(true);
 logicAnodeQuartz->SetVisAttributes(quartzVis);
 G4double sipmBottom = 0.024*m - 0.001*m;
-G4double anodeZ = sipmBottom - 5*mm - anodeHalfZ; // 6.05 mm below SiPM G4double anodeZ = sipmBottom - 5*mm - anodeHalfZ; center to center
+G4double anodeZ = sipmBottom - 16*mm - anodeHalfZ; // 17.05 mm below SiPM G4double anodeZ = sipmBottom - 5*mm - anodeHalfZ; center to center
 new G4PVPlacement(0, G4ThreeVector(0.,0.,anodeZ),
                   logicAnodeQuartz, "physAnodeQuartz",
                   logicLiquidXenon, false, 0, true);
