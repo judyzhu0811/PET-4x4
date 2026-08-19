@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("/Users/judyz/Desktop/PET-4x4/build/3.05mm/3.05mm.csv")
+df = pd.read_csv("/Users/judyz/Desktop/PET-4x4/build/17.05mm/17.05mm.csv")
 
 x_min, x_max = -35, 35
 y_min, y_max = -35, 35
@@ -86,6 +86,6 @@ plt.title(
 )
 
 plt.tight_layout()
-output_path = "/Users/judyz/Desktop/PET-4x4/build/3.05mm/anodewires.png"
+output_path = "/Users/judyz/Desktop/PET-4x4/build/17.05mm"
 plt.savefig(output_path, dpi=300, bbox_inches='tight')
 plt.show()

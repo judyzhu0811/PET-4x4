@@ -26,28 +26,20 @@ MyPrimaryGenerator::~MyPrimaryGenerator()
 
 void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
 {
-    // ---------------- S2 ELECTROLUMINESCENCE REGION ----------------
-
-    // geometry match to your anode definition in construction.cc
     G4double anodeHalfXY = 34.0*mm;
     G4double elThickness = 0.5*mm;
 
-    // reconstruct anode Z (must match construction.cc)
     G4double anodeHalfZ  = 0.25*mm;
     G4double sipmBottom = 0.024*m - 0.001*m;
     G4double anodeZ = sipmBottom - 14*mm - anodeHalfZ;
 
-    // XY uniform within active area
     G4double x0 = (G4UniformRand() - 0.5) * 2.0 * anodeHalfXY;
     G4double y0 = (G4UniformRand() - 0.5) * 2.0 * anodeHalfXY;
 
-    // thin EL layer near anode wires
     G4double z0 = anodeZ + (G4UniformRand() - 0.5) * elThickness;
 
     fEmissionPos = G4ThreeVector(x0, y0, z0);
     fParticleGun->SetParticlePosition(fEmissionPos);
-
-    // ---------------- photon generation ----------------
 
     for (int i = 0; i < fNPhotons; i++)
     {

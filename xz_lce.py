@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter
 import os
 
-csv_path = "/Users/judyz/Desktop/PET-4x4/build/15.05mm/15.05mm.csv"
+csv_path = "/Users/judyz/Desktop/PET-4x4/build/17.05mm/17.05mm.csv"
 
 df = pd.read_csv(csv_path)
 

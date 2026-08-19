@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("/Users/judyz/Desktop/PET-4x4/build/15mm/15mm.csv")
-x_min, x_max = -35, 35  # mm
+df = pd.read_csv("/Users/judyz/Desktop/PET-4x4/build/17.05mm/17.05mm.csv")
+x_min, x_max = -35, 35 
 y_min, y_max = -35, 35  
 n_bins = 45 
 x_bins = np.linspace(x_min, x_max, n_bins + 1)
@@ -37,7 +37,7 @@ plt.xlabel("X (mm)")
 plt.ylabel("Y (mm)")
 plt.title(f"LCE Map (bins={n_bins})")
 plt.tight_layout()
-output_path = "/Users/judyz/Desktop/PET-4x4/build/15mm/xy_lce.png"
+output_path = "/Users/judyz/Desktop/PET-4x4/build"
 plt.savefig(output_path, dpi=300)
 plt.show()
 

@@ -48,20 +48,13 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	G4Element* Au = new G4Element("Au", "Au", 79., 196.96657 * g / mole);
 	//================================== materials ==================================
 
-	//----------------------------------- air ---------------------------------------
 	G4Material *Air = nist->FindOrBuildMaterial("G4_AIR");
-
-	//----------------------------------- water -------------------------------------
 	G4Material *Water = new G4Material("Water", 1. * g / cm3, 2, kStateLiquid);
 	Water->AddElement(H, 2);
 	Water->AddElement(O, 1);
-
-	//----------------------------------- vacuum ------------------------------------
 	G4Material *Vacuum = new G4Material("Vacuum", 1.e-20 * g / cm3, 2, kStateGas);
 	Vacuum->AddElement(N, 0.755);
 	Vacuum->AddElement(O, 0.245);
-	
-	//------------------------------------ teflon -----------------------------------
 	G4Material *Teflon = new G4Material("Teflon", 2.2 * g / cm3, 2, kStateSolid);
 	Teflon->AddElement(C, 0.240183);
 	Teflon->AddElement(F, 0.759817);
@@ -86,7 +79,6 @@ G4MaterialPropertiesTable* pLXeTeflonSurfaceTable = new G4MaterialPropertiesTabl
 pLXeTeflonSurfaceTable->AddProperty("REFLECTIVITY", pdTeflonPhotonMomentum, pdTeflonReflectivity, iNbEntries);
 pLXeTeflonSurfaceTable->AddProperty("EFFICIENCY", pdTeflonPhotonMomentum, pdTeflonEfficiency, iNbEntries);
 pLXeTeflonOpticalSurface->SetMaterialPropertiesTable(pLXeTeflonSurfaceTable);
-	//----------------------------------silicon--------------------------------------------
 	G4Material* Silicon = nist->FindOrBuildMaterial("G4_Si");
 
 G4double SiPhotonEnergy[iNbEntries] = {6.91*eV, 6.98*eV, 7.05*eV};
@@ -98,21 +90,16 @@ SiMPT->AddProperty("RINDEX", SiPhotonEnergy, SiRefractiveIndex, iNbEntries);
 SiMPT->AddProperty("ABSLENGTH", SiPhotonEnergy, SiAbsLength, iNbEntries);
 
 Silicon->SetMaterialPropertiesTable(SiMPT);
-
-	//----------------------------------- quartz ------------------------------------
 	// ref: http://www.sciner.com/Opticsland/FS.htm
 	G4Material *Quartz = new G4Material("Quartz", 2.201 * g / cm3, 2, kStateSolid,
 										168.15 * kelvin, 1.5 * atmosphere);
 	Quartz->AddElement(Si, 1);
 	Quartz->AddElement(O, 2);
 
-	// Optical properties Quartz
 	const G4int iNbEntriesMatch = 5;
 	G4double pdQuartzPhotonMomentum[iNbEntriesMatch] = {
 		1. * eV, 6.9 * eV, 6.91 * eV, 6.98 * eV,
 		7.05 * eV};  // SERENA: changed  2.*eV to 1.*eV otherwise it gets stuck
-					// "Out of Range - Attempt to retrieve information below
-					// range!"
 	G4double pdQuartzRefractiveIndex[iNbEntriesMatch] = {1.50, 1.50, 1.50, 1.56,
 														1.60};
 	G4double pdQuartzAbsorbtionLength[iNbEntriesMatch] = {30 * m, 30 * m, 30 * m,
@@ -128,8 +115,6 @@ Silicon->SetMaterialPropertiesTable(SiMPT);
 										pdQuartzAbsorbtionLength,
 										iNbEntriesMatch);
 	Quartz->SetMaterialPropertiesTable(pQuartzPropertiesTable);
-
-	//---------------------------------liquid Xenon--------------------
 	
 	G4Material *LXe = new G4Material("LXe", 2.85 * g / cm3, 1, kStateLiquid, 177.05 * kelvin, 1.8 * atmosphere);
 	LXe->AddElement(Xe, 1);
@@ -139,7 +124,6 @@ Silicon->SetMaterialPropertiesTable(SiMPT);
 	G4double pdLXeRefractiveIndex[iNbEntries] = { 1.63,    1.61,    1.58 };
 	G4double pdLXeAbsorbtionLength[iNbEntries] = { 5000. * cm, 5000. * cm, 5000. * cm };
 	G4double pdLXeScatteringLength[iNbEntries] = { 100. * cm,  100. * cm,  100. * cm };
-// G4double pdLXeScatteringLength[iNbEntries] = { 30. * cm,  30. * cm,  30. * cm };
 
 	G4MaterialPropertiesTable* pLXePropertiesTable = new G4MaterialPropertiesTable();
 
@@ -158,12 +142,10 @@ Silicon->SetMaterialPropertiesTable(SiMPT);
 	LXe->SetMaterialPropertiesTable(pLXePropertiesTable);
     G4Material *worldMat = Vacuum;
 
-//---------------Detector Construction----------
-    
     G4Box *solidWorld = new G4Box("solidWorld", 0.05*m, 0.05*m, 0.05*m);
 	G4Box *solidDetector = new G4Box("solidDetector", 0.0075*m, 0.0075*m, 0.001*m);
 	G4LogicalVolume* logicDetector = new G4LogicalVolume(solidDetector, Silicon, "logicDetector");
-//----------Liquid Xenon-------------
+
 	G4double shrinkXY = 0.1*mm;
 	G4double shrinkZ  = 0.1*mm;
 	G4Box *solidLiquidXenon = new G4Box(
@@ -260,7 +242,7 @@ G4VisAttributes* quartzVis = new G4VisAttributes(G4Colour(0.5,0.5,1.0,0.3)); // 
 quartzVis->SetForceSolid(true);
 logicAnodeQuartz->SetVisAttributes(quartzVis);
 G4double sipmBottom = 0.024*m - 0.001*m;
-G4double anodeZ = sipmBottom - 16*mm - anodeHalfZ; // 17.05 mm below SiPM G4double anodeZ = sipmBottom - 5*mm - anodeHalfZ; center to center
+G4double anodeZ = sipmBottom - 39*mm - anodeHalfZ; // 40.05 mm below SiPM G4double anodeZ = sipmBottom - 5*mm - anodeHalfZ; center to center
 new G4PVPlacement(0, G4ThreeVector(0.,0.,anodeZ),
                   logicAnodeQuartz, "physAnodeQuartz",
                   logicLiquidXenon, false, 0, true);

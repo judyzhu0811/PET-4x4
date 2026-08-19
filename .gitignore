@@ -1,0 +1,19 @@
+# Python virtual environments
+venv/
+venv312/
+.venv/
+
+# Geant4 / CMake build files
+build/
+cmake-build-*/
+
+# Generated CSV data
+*.csv
+
+# Python cache
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
