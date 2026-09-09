@@ -3,10 +3,6 @@ venv/
 venv312/
 .venv/
 
-# Geant4 / CMake build files
-build/
-cmake-build-*/
-
 # Generated CSV data
 *.csv
 
